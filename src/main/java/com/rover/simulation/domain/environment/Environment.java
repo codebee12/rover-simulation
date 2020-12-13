@@ -1,5 +1,9 @@
 package com.rover.simulation.domain.environment;
 
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
+
 import java.util.ArrayList;
 
 enum TerrainType
@@ -9,6 +13,9 @@ enum TerrainType
     ROCK,
     SAND
 }
+@Getter
+@Setter
+@RequiredArgsConstructor
 public class Environment {
 
     private double temperature;
