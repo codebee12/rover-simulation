@@ -1,14 +1,20 @@
 package com.rover.simulation.service;
 
-import org.springframework.http.ResponseEntity;
+import com.rover.simulation.domain.environment.Environment;
 import org.springframework.stereotype.Service;
 
 @Service
 public class EnvironmentConfigService {
 
-    public int configureEnv()
-    {
+    private Environment environment;
 
-        return 0;
+    public void configureEnv(Environment environment)
+    {
+        this.environment = environment;
+    }
+
+    public void patchEnv(Environment env)
+    {
+        //set new env
     }
 }
