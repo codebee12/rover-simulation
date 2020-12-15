@@ -28,6 +28,7 @@ public class EnvironmentController {
     public ResponseEntity<String> patchEnv(Environment environment)
     {
         //logic to patch
+        this.environmentConfigService.patchEnv(environment);
         return ResponseEntity.ok("200");
     }
 
