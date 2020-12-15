@@ -4,6 +4,9 @@ A company has developed a rover for extra-terrestrial exploration.
 It can be configured to act differently in different environments.
 Before sending it on a voyage, we need to simulate an extra-terrestrial environment and test the rover.
 
+## Problem Statement
+Availabe [here](https://github.com/codebee12/rover-simulation/blob/main/src/main/resources/ProblemStatement.pdf)
+
 ## Tech used
 
 1. JAVA 8
