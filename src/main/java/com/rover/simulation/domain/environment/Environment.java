@@ -20,6 +20,7 @@ public class Environment {
 
     private double temperature;
     private double humidity;
+    //Todo: make json attribute compatible
     private boolean solarFlare;
     private boolean storm;
     private ArrayList<ArrayList<TerrainType>> areaMap;
