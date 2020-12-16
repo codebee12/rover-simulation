@@ -12,7 +12,9 @@ com\rover\simulation\Application.class
 com\rover\simulation\domain\rover\Battery.class
 com\rover\simulation\domain\rover\RoverActivity.class
 com\rover\simulation\service\EnvironmentConfigService.class
+com\rover\simulation\controller\RoverController.class
 com\rover\simulation\domain\rover\ScenarioCondition.class
 com\rover\simulation\domain\rover\Rover.class
 com\rover\simulation\domain\rover\SampleTypeItem.class
 com\rover\simulation\domain\rover\EnvironmentProperty.class
+com\rover\simulation\service\RoverService.class
