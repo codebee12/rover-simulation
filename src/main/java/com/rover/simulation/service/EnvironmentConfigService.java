@@ -16,34 +16,31 @@ public class EnvironmentConfigService {
     public void configureEnv(Environment environment)
     {
         this.environment = environment;
-      //  this.environment.setTemperature(environment.getTemperature());
-     //   System.out.println(this.environment.getTemperature());
         log.info("Temperature",environment.getTemperature());
     }
 
     public void patchEnv(Environment env)
     {
-       // this.environment = env; // deep comparison required to patch things
-        log.info("Temperature",environment.getTemperature());
-        System.out.println(this.environment.getTemperature());
-        System.out.println(this.environment.getAreaMap());
-
-        //ToDo: Deep comparison and merge changes
         DiffNode diff = ObjectDifferBuilder.buildDefault().compare(env, environment);
         //set new env
         diff.visit(new DiffNode.Visitor()
         {
             public void node(DiffNode node, Visit visit)
             {
+                //ToDo: Update only for changed ones, handled null, boolean params remain
                 // only leaf-nodes with changes
-               /* if (node.hasChanges() && !node.hasChildren()) {
-
-                }*/
-                final Object baseValue = node.canonicalGet(environment);
+                if (node.hasChanges() && !node.hasChildren()) {
+                    System.out.println(node.getPath() + "changed");
+                    if(node.canonicalGet(env) !=null)
+                        node.canonicalSet(environment, node.canonicalGet(env));
+                }
+                /*final Object baseValue = node.canonicalGet(environment);
                 final Object workingValue = node.canonicalGet(env);
                 final String message = node.getPath() + " changed from " +
                         baseValue + " to " + workingValue;
-                System.out.println(message);
+                System.out.println(message);*/
+                System.out.println(environment.getTemperature());
+                System.out.println(environment.isSolarFlare());
             }
         });
     }
