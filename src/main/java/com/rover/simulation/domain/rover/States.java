@@ -5,10 +5,12 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
-enum Action
-{
-    @JsonProperty("move")
-    MOVE,
-    @JsonProperty("collect-sample")
-    COLLECT_SAMPLE
+@Getter
+@Setter
+@RequiredArgsConstructor
+public class States {
+
+    private String name;
+    @JsonProperty("allowed-actions")
+    private Action allowedActions;
 }

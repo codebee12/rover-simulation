@@ -10,5 +10,6 @@ import lombok.Setter;
 public class RoverActivity {
 
     private String is; // for mobility
+    private Item<CollectSample> performs; // either CollectSample of ItemUsage or both
 
 }

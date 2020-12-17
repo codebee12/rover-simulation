@@ -12,7 +12,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController
-@RequestMapping("/api/environment/")
+@RequestMapping("/api/environment")
 public class EnvironmentController {
 
     @Autowired
@@ -22,7 +22,6 @@ public class EnvironmentController {
     public ResponseEntity<String> configure(@RequestBody Environment environment)
     {
         this.environmentConfigService.configureEnv(environment);
-        //System.out.println("Sending temp "+ environment.getTemperature());
         log.info("Sending temp....",environment.getTemperature());
         return ResponseEntity.ok("200");
     }

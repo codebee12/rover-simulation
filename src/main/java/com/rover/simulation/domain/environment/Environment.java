@@ -27,7 +27,6 @@ public class Environment {
     private double humidity;
     @JsonProperty("solar-flare")
     private boolean solarFlare;
-
     private boolean storm;
     @JsonProperty("area-map")
     private ArrayList<ArrayList<TerrainType>> areaMap;
